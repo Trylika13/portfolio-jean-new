@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio de Jean Grégoire — étudiant développeur web passionné. Découvrez mes projets, mon parcours et contactez-moi."
+    />
+
+    <title>Jean Grégoire — Web Dev</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Poppins:wght@600&family=Montserrat:wght@700&family=Nunito:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/52e9a318e9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-teal-500/20 via-teal-600/10 to-orange-400/20"
+  >
+    <!-- 🌀 LOADER -->
+    <div
+      id="loader"
+      class="fixed inset-0 bg-orange-50 flex flex-col items-center justify-center z-[99999]"
+    >
+      <img
+        src="/img/avatarloader-wobg.png"
+        alt="Jean qui fait coucou"
+        class="w-100 sm:w-36"
+      />
+      <p class="mt-4 text-teal-900 font-semibold text-lg">Chargement...</p>
+    </div>
+
+    <nav
+      class="fixed top-4 left-1/2 -translate-x-1/2 bg-teal-900 backdrop-blur-md shadow-lg rounded-full flex justify-between items-center px-6 sm:px-10 py-3 w-[90%] sm:w-auto max-w-xl z-[9999]"
+    >
+      <!-- Icônes (mobile) -->
+      <div class="flex sm:hidden justify-between w-full">
+        <a href="#hero" class="text-white hover:text-orange-500 transition">
+          <i class="fa-solid fa-house text-lg"></i>
+        </a>
+        <a href="#projects" class="text-white hover:text-orange-500 transition">
+          <i class="fa-solid fa-code text-lg"></i>
+        </a>
+        <a href="#about" class="text-white hover:text-orange-500 transition">
+          <i class="fa-solid fa-user text-lg"></i>
+        </a>
+        <a href="#contact" class="text-white hover:text-orange-500 transition">
+          <i class="fa-solid fa-envelope text-lg"></i>
+        </a>
+      </div>
+
+      <!-- Liens texte (desktop) -->
+      <div class="hidden sm:flex gap-8 font-medium text-white">
+        <a href="#hero" class="hover:text-orange-500 transition">Accueil</a>
+        <a href="#projects" class="hover:text-orange-500 transition">Projets</a>
+        <a href="#about" class="hover:text-orange-500 transition">À propos</a>
+        <a href="#contact" class="hover:text-orange-500 transition">Contact</a>
+      </div>
+    </nav>
+
+    <!--  HERO -->
+    <header
+      id="hero"
+      class="h-[100dvh] flex flex-col-reverse md:flex-row items-center justify-center gap-10 p-6 md:px-20 bg-gradient-to-br from-teal-500/20 via-teal-600/10 to-orange-400/20 pt-28 md:pt-32"
+    >
+      <!-- Texte -->
+      <div class="md:w-1/2 text-center md:text-left space-y-5 md:space-y-6">
+        <h1
+          class="text-4xl md:text-6xl font-bold text-teal-900 leading-tight text-center md:text-left"
+        >
+          Salut, moi c’est<br />
+          <span
+            id="typing"
+            class="block text-3xl md:text-5xl font-bold text-orange-500 mt-2 h-[1.5em]"
+          ></span>
+        </h1>
+
+        <p class="text-lg md:text-2xl text-teal-800 font-medium">
+          Étudiant développeur web passionné
+        </p>
+
+        <p class="text-teal-700 max-w-md mx-auto md:mx-0 text-sm md:text-base">
+          J’aime transformer mes idées (et celles des autres) en projets
+          concrets. Le code, pour moi, c’est un moyen de créer, d’apprendre et
+          de m’amuser.
+        </p>
+
+        <!-- Liens sociaux -->
+        <div
+          class="flex flex-wrap justify-center md:justify-start gap-x-3 gap-y-2"
+        >
+          <a
+            href="https://github.com/Trylika13"
+            class="flex items-center gap-2 text-teal-700 hover:text-orange-600 transition"
+          >
+            <i class="fa-brands fa-github text-xl"></i> GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/jean-grégoire-b8773838a"
+            target="_blank"
+            class="flex items-center gap-2 text-teal-700 hover:text-orange-600 transition"
+          >
+            <i class="fa-brands fa-linkedin text-xl"></i> LinkedIn
+          </a>
+          <a
+            href="https://www.facebook.com/JeanGregoire13?"
+            class="flex items-center gap-2 text-teal-700 hover:text-orange-600 transition"
+          >
+            <i class="fa-brands fa-facebook text-xl"></i> Facebook
+          </a>
+        </div>
+      </div>
+
+      <!-- Image -->
+      <div class="flex justify-center">
+        <img
+          src="/img/avatarJG.png"
+          alt="Avatar de Jean Grégoire généré par l'IA"
+          class="w-56 sm:w-64 md:w-80 rounded-xl drop-shadow-xl"
+        />
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="projects"
+        class="min-h-[100dvh] flex flex-col justify-center py-20 bg-gradient-to-b from-teal-50 to-orange-50 px-6 md:px-20"
+      >
+        <h2
+          class="text-center text-3xl md:text-4xl font-bold text-teal-900 mb-12"
+        >
+          Mes projets
+        </h2>
+
+        <div class="grid gap-8 md:grid-cols-3 max-w-6xl mx-auto items-stretch">
+          <!--  Projet 1 - Site WordPress -->
+          <div
+            class="reveal-up bg-white/80 border border-teal-200 rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.1] transition p-6 flex flex-col items-center text-center w-full max-w-sm h-full"
+          >
+            <img
+              src="/img/bahala-na.png"
+              alt="Site Bahala Na"
+              class="rounded-lg mb-4 shadow-md h-48 w-full object-cover"
+            />
+            <h3 class="text-2xl font-semibold text-orange-500 mb-2">
+              Bahala Na 🌴
+            </h3>
+            <p class="text-gray-700 mb-4 text-sm flex-grow">
+              Mon premier projet WordPress réalisé lors de mon examen. Un site
+              de voyages sur mesure autour de ma passion pour les voyages et
+              l'Asie du Sud-Est.
+            </p>
+            <a
+              href="https://bahala-na.infinityfreeapp.com/"
+              target="_blank"
+              class="text-teal-700 font-semibold hover:text-orange-500 transition mt-auto"
+            >
+              Voir le site →
+            </a>
+          </div>
+
+          <!--  Projet 2 - Portfolio -->
+          <div
+            class="reveal-up bg-white/80 border border-teal-200 rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.1] transition p-6 flex flex-col items-center text-center w-full max-w-sm h-full"
+          >
+            <img
+              src="/img/portfolio.png"
+              alt="Portfolio de Jean"
+              class="rounded-lg mb-4 shadow-md h-48 w-full object-cover"
+            />
+            <h3 class="text-2xl font-semibold text-orange-500 mb-2">
+              Mon portfolio 💻
+            </h3>
+            <p class="text-gray-700 mb-4 text-sm flex-grow">
+              Le site sur lequel tu es actuellement ! Construit en HTML,
+              Tailwind et un soupçon de JavaScript, il me représente pleinement.
+            </p>
+            <a
+              href="#"
+              class="text-teal-700 font-semibold hover:text-orange-500 transition mt-auto"
+            >
+              Voir le projet →
+            </a>
+          </div>
+
+          <!-- Projet 3 - GitHub -->
+          <div
+            class="reveal-up bg-white/80 border border-teal-200 rounded-2xl shadow-md hover:shadow-xl hover:scale-[1.1] transition p-6 flex flex-col items-center text-center w-full max-w-sm h-full"
+          >
+            <img
+              src="/img/github.png"
+              alt="Lien vers GitHub"
+              class="rounded-lg mb-4 shadow-md h-48 w-full object-cover"
+            />
+            <h3 class="text-2xl font-semibold text-orange-500 mb-2">
+              Autres projets ⚙️
+            </h3>
+            <p class="text-gray-700 mb-4 text-sm flex-grow">
+              Tu peux retrouver mes autres projets en développement directement
+              sur mon GitHub. Je le mets à jour régulièrement.
+            </p>
+            <a
+              href="https://github.com/Trylika13"
+              target="_blank"
+              class="text-teal-700 font-semibold hover:text-orange-500 transition mt-auto"
+            >
+              Voir mon GitHub →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="about"
+        class="relative py-20 bg-gradient-to-b from-orange-50 to-white"
+      >
+        <h2
+          class="text-center text-3xl text-teal-600 font-semibold mb-6 hover:text-orange-600 transition"
+        >
+          À propos de moi
+        </h2>
+
+        <p
+          class="text-center text-gray-600 max-w-2xl mx-6 md:mx-auto mb-12 opacity-0 translate-y-4 transition duration-700 reveal-fade"
+        >
+          Je suis étudiant en développement web, passionné par la création
+          d’interfaces simples et efficaces. J’aime apprendre, expérimenter et
+          construire des projets qui ont du sens 🌱
+        </p>
+
+        <div
+          class="w-11/12 max-w-3xl mx-auto text-gray-700 space-y-10 leading-relaxed"
+        >
+          <!-- Ce que j’ai appris -->
+          <div
+            class="border-l-[3px] border-teal-600 pl-6 bg-orange-50/40 rounded-md shadow-sm hover:bg-gradient-to-br from-teal-500/20 via-teal-600/10 to-orange-400/20 hover:scale-[1.01] hover:shadow-md transition-all ease-out duration-800 opacity-0 translate-y-4 reveal-fade"
+          >
+            <h3
+              class="text-xl text-orange-600 font-semibold mb-3 tracking-wide uppercase flex items-center gap-2"
+            >
+              🧠 <span>Ce que j’ai appris</span>
+            </h3>
+            <p>
+              J’ai commencé par les bases :
+              <span class="font-semibold text-teal-600">HTML</span> et
+              <span class="font-semibold text-teal-600">CSS</span>, avec
+              lesquelles je me sens à l’aise aujourd’hui. J’apprends à maîtriser
+              <span class="font-semibold text-teal-600">Tailwind CSS</span>,
+              même si je garde encore plus de facilité avec le CSS classique. Je
+              travaille aussi avec
+              <span class="font-semibold text-teal-600">MySQL</span> pour créer
+              et organiser des tables et leurs relations. Côté back-end, j’ai
+              appris le <span class="font-semibold text-teal-600">PHP</span> à
+              travers le modèle
+              <span class="font-semibold text-teal-600">MVC</span> et je vais
+              bientôt découvrir
+              <span class="font-semibold text-teal-600">Laravel</span> pour
+              approfondir cette logique.
+            </p>
+          </div>
+
+          <!--  Mon rapport au développement -->
+          <div
+            class="border-l-[3px] border-teal-600 pl-6 bg-orange-50/40 rounded-md shadow-sm hover:bg-gradient-to-br from-teal-500/20 via-teal-600/10 to-orange-400/20 hover:scale-[1.01] hover:shadow-md transition duration-300 opacity-0 translate-y-4 reveal-fade"
+          >
+            <h3
+              class="text-xl text-orange-600 font-semibold mb-3 tracking-wide uppercase flex items-center gap-2"
+            >
+              ⚙️ <span>Mon rapport au développement</span>
+            </h3>
+            <p>
+              J’ai beaucoup d’idées, parfois trop 😅, ce qui me pousse souvent à
+              recommencer pour trouver la version qui me plaît le plus. Ce n’est
+              pas un frein, mais plutôt une manière pour moi d’apprendre à
+              affiner mes choix et à mieux structurer mes projets. Je ne suis
+              pas le plus créatif visuellement, mais j’aime concevoir des
+              projets
+              <span class="font-semibold text-teal-600"
+                >clairs, cohérents et fonctionnels</span
+              >. En <span class="font-semibold text-teal-600">JavaScript</span>,
+              j’ai eu du mal au début à cause du manque de concret, surtout en
+              travaillant longtemps en vanilla JS. Depuis que j’apprends
+              <span class="font-semibold text-teal-600">Vue.js</span> et
+              l’utilisation d’<span class="font-semibold text-orange-600"
+                >API</span
+              >, j’y trouve enfin une vraie logique et beaucoup plus de plaisir
+              à coder.
+            </p>
+          </div>
+
+          <!--  Ce que je recherche -->
+          <div
+            class="border-l-[3px] border-teal-600 pl-6 bg-orange-50/40 rounded-md shadow-sm hover:bg-gradient-to-br from-teal-500/20 via-teal-600/10 to-orange-400/20 hover:scale-[1.01] hover:shadow-md transition duration-300 opacity-0 translate-y-4 reveal-fade"
+          >
+            <h3
+              class="text-xl text-orange-600 font-semibold mb-3 tracking-wide uppercase flex items-center gap-2"
+            >
+              🚀 <span>Ce que je recherche</span>
+            </h3>
+            <p>
+              Je cherche avant tout un
+              <span class="font-semibold text-teal-600">stage</span> qui me
+              permettra de travailler sur du concret : des projets variés,
+              réels, où je peux apprendre et contribuer activement. J’aimerais
+              <span class="font-semibold text-teal-600"
+                >toucher un peu à tout</span
+              >
+              pour découvrir ce que j’aime le plus dans le web.
+            </p>
+            <p class="mt-4">
+              J’ai déjà travaillé avec
+              <span class="font-semibold text-orange-600">WordPress</span>, mais
+              j’aimerais apprendre à utiliser d’autres
+              <span class="font-semibold text-teal-600">CMS modernes</span>
+              afin d’élargir mes compétences et comprendre différentes approches
+              de développement web.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="contact"
+        class="py-20 bg-gradient-to-b from-orange-50 to-teal-50 px-6 md:px-20"
+      >
+        <h2
+          class="text-center text-3xl md:text-4xl font-bold text-teal-700 mb-10"
+        >
+          Me contacter
+        </h2>
+
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="max-w-2xl mx-auto bg-white/70 backdrop-blur-md rounded-2xl shadow-lg p-8 space-y-6 border border-teal-100"
+        >
+          <input
+            type="hidden"
+            name="access_key"
+            value="8aedb4c2-9699-46bf-97a7-b1fea23622de"
+          />
+          <!-- Nom et prénom -->
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <label
+                for="nom"
+                class="block text-sm font-semibold text-teal-700 mb-1"
+                >Nom</label
+              >
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                required
+                class="w-full rounded-lg border border-teal-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-300 outline-none px-4 py-2 transition"
+              />
+            </div>
+
+            <div class="flex-1">
+              <label
+                for="prenom"
+                class="block text-sm font-semibold text-teal-700 mb-1"
+                >Prénom</label
+              >
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                required
+                class="w-full rounded-lg border border-teal-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-300 outline-none px-4 py-2 transition"
+              />
+            </div>
+          </div>
+
+          <!-- Téléphone -->
+          <div>
+            <label
+              for="tel"
+              class="block text-sm font-semibold text-teal-700 mb-1"
+              >Téléphone</label
+            >
+            <input
+              type="tel"
+              id="tel"
+              name="tel"
+              class="w-full rounded-lg border border-teal-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-300 outline-none px-4 py-2 transition"
+            />
+          </div>
+
+          <!-- Email -->
+          <div>
+            <label
+              for="email"
+              class="block text-sm font-semibold text-teal-700 mb-1"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full rounded-lg border border-teal-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-300 outline-none px-4 py-2 transition"
+            />
+          </div>
+
+          <!-- Préférence de communication -->
+          <div>
+            <span class="block text-sm font-semibold text-teal-700 mb-2"
+              >Préférence de contact</span
+            >
+            <div class="flex flex-wrap gap-4">
+              <label
+                class="flex items-center gap-2 cursor-pointer text-teal-700 hover:text-orange-500"
+              >
+                <input
+                  type="radio"
+                  name="contact_pref"
+                  value="email"
+                  class="accent-orange-500"
+                  required
+                />
+                Email
+              </label>
+              <label
+                class="flex items-center gap-2 cursor-pointer text-teal-700 hover:text-orange-500"
+              >
+                <input
+                  type="radio"
+                  name="contact_pref"
+                  value="tel"
+                  class="accent-orange-500"
+                />
+                Téléphone
+              </label>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label
+              for="message"
+              class="block text-sm font-semibold text-teal-700 mb-1"
+              >Message</label
+            >
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full rounded-lg border border-teal-200 focus:border-orange-400 focus:ring-2 focus:ring-orange-300 outline-none px-4 py-2 transition resize-none"
+            ></textarea>
+          </div>
+
+          <!-- Bouton -->
+          <div class="text-center pt-4">
+            <button
+              type="submit"
+              class="bg-orange-500 text-white font-semibold px-8 py-3 rounded-xl shadow-md hover:bg-orange-600 hover:shadow-lg transition"
+            >
+              Envoyer le message ✉️
+            </button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="bg-teal-900 text-white py-8 px-6">
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="text-sm text-center md:text-left">
+          © <span id="year"></span> — Développé par
+          <span class="text-orange-500 font-semibold">Jean Grégoire</span>
+        </p>
+
+        <div class="flex gap-4 text-orange-500">
+          <a
+            href="https://github.com/"
+            target="_blank"
+            class="hover:text-white transition"
+          >
+            <i class="fa-brands fa-github text-xl"></i>
+          </a>
+          0
+          <a href="#" target="_blank" class="hover:text-white transition">
+            <i class="fa-brands fa-linkedin text-xl"></i>
+          </a>
+          <a href="#" target="_blank" class="hover:text-white transition">
+            <i class="fa-brands fa-x-twitter text-xl"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

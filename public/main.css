@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =============================
+   🧩 Composants réutilisables
+============================= */
+@layer components {
+  .link {
+    @apply flex items-center gap-2 hover:text-orange-600 transition;
+  }
+}
+
+/* =============================
+   ✍️ Effet typing
+============================= */
+#typing::after {
+  content: "|";
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* =============================
+   💫 Animations reveal
+============================= */
+
+/* Fade-in (section "About") */
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.reveal-fade.visible {
+  opacity: 1;
+}
+
+/* Slide-up (section "Projets") */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================
+   🌐 Global
+============================= */
+html {
+  scroll-behavior: smooth;
+}
+/* 🌀 Animation de disparition du loader */
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}

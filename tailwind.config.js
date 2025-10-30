@@ -2,7 +2,7 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts}", // ← ajoute cette ligne
+    "./src/**/*.{js,ts,jsx,tsx}", // ✅ plus complet, c’est la version officielle
   ],
   theme: {
     extend: {},

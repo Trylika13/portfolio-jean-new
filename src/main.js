@@ -1,4 +1,4 @@
-import "./main.css";
+import "/src/main.css";
 
 /* =============================
    🌀 Loader + animation prénom
